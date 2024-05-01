@@ -8,7 +8,7 @@ import { UsersModule } from './users/users.module';
   imports: [
     UsersModule,
     MongooseModule.forRoot(
-      `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PASSWORD}?retryWrites=true&w=majority`,
+      `mongodb+srv://${process.env.MONGO_ATLAS_USER}:${process.env.MONGO_ATLAS_PASSWORD}@cluster0.taodhds.mongodb.net/${process.env.MONGO_ATLAS_DB}?retryWrites=true&w=majority&appName=Cluster0`,
     ),
   ],
   controllers: [AppController],
