@@ -12,3 +12,13 @@ services:
       - "3000:3000"
     env_file:
       - .env
+    environment:
+      - DATABASE_URL=mongodb://mongo:27017/nest-mongo-docker-db
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27018:27017"
