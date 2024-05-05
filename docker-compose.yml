@@ -20,5 +20,7 @@ services:
   mongo:
     container_name: mongo
     image: mongo:latest
+    volumes:
+      - D:\Ahyan\Bry_D_drive\Programming\Courses\mongo_db_volume:/data/db
     ports:
       - "27018:27017"
